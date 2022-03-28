@@ -1,7 +1,9 @@
+import Navbar from "./components/Nav/Navbar";
+
 const App = () => {
   return (
     <div className="">
-      <h1 className="text-right">Food App</h1>
+      <Navbar />
     </div>
   );
 };
