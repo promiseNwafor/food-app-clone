@@ -5,12 +5,5 @@
 @import url("https://use.typekit.net/fpg8rdq.css");
 
 .menu-list {
-  text-transform: uppercase;
-  padding-top: 8px;
-  padding-bottom: 8px;
-  cursor: pointer;
-}
-
-.menu-list:hover {
-  background: #eee;
+  @apply uppercase py-2 cursor-pointer hover:bg-gray-200;
 }

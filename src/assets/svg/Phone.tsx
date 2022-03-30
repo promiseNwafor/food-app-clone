@@ -1,3 +1,5 @@
+import React from "react";
+
 const Phone = () => {
   return (
     <svg
@@ -17,4 +19,4 @@ const Phone = () => {
   );
 };
 
-export default Phone;
+export default React.memo(Phone);

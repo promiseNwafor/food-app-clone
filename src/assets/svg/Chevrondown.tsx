@@ -1,3 +1,5 @@
+import React from "react";
+
 const Chevrondown = () => {
   return (
     <svg
@@ -15,4 +17,4 @@ const Chevrondown = () => {
   );
 };
 
-export default Chevrondown;
+export default React.memo(Chevrondown);

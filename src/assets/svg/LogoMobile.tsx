@@ -1,3 +1,5 @@
+import React from "react";
+
 const LogoMobile = () => {
   return (
     <svg
@@ -55,4 +57,4 @@ const LogoMobile = () => {
   );
 };
 
-export default LogoMobile;
+export default React.memo(LogoMobile);

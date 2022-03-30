@@ -1,3 +1,5 @@
+import React from "react";
+
 type Props = {
   className: string;
 };
@@ -21,4 +23,4 @@ const CancelIcon: React.FC<Props> = ({ className }) => {
   );
 };
 
-export default CancelIcon;
+export default React.memo(CancelIcon);

@@ -1,3 +1,5 @@
+import React from "react";
+
 type Props = {};
 
 const User = (props: Props) => {
@@ -19,4 +21,4 @@ const User = (props: Props) => {
   );
 };
 
-export default User;
+export default React.memo(User);
