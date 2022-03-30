@@ -1,3 +1,5 @@
+import React from "react";
+
 type Props = {
   className: string;
 };
@@ -21,4 +23,4 @@ const Hamburger: React.FC<Props> = ({ className }) => {
   );
 };
 
-export default Hamburger;
+export default React.memo(Hamburger);

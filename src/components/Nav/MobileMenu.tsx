@@ -1,16 +1,12 @@
 import Chevrondown from "../../assets/svg/Chevrondown";
 import PrimeIcon from "../../assets/svg/PrimeIcon";
 
-type Props = {
-  toggleMenu: boolean;
-};
+type Props = {};
 
-const MenuMobile: React.FC<Props> = ({ toggleMenu }) => {
+const MobileMenu: React.FC<Props> = () => {
   return (
     <div
-      className={`lg:hidden bg-white text-center py-2 overflow-hidden text-body z-10 font-muli transition ease duration-200 ${
-        toggleMenu ? "h-auto shadow-y opacity-1" : "h-0 opacity-0"
-      }`}
+      className={`lg:hidden absolute top-16 w-full shadow-y bg-white text-center py-2 overflow-hidden text-body z-10 font-muli transition ease duration-200`}
     >
       <div className="mx-7">
         <ul className="">
@@ -34,4 +30,4 @@ const MenuMobile: React.FC<Props> = ({ toggleMenu }) => {
   );
 };
 
-export default MenuMobile;
+export default MobileMenu;

@@ -1,3 +1,5 @@
+import React from "react";
+
 const Logo = () => {
   return (
     <svg
@@ -90,4 +92,4 @@ const Logo = () => {
   );
 };
 
-export default Logo;
+export default React.memo(Logo);

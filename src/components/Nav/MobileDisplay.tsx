@@ -1,16 +1,19 @@
+import { useState } from "react";
 import { Link } from "react-router-dom";
 import CancelIcon from "../../assets/svg/CancelIcon";
 import Hamburger from "../../assets/svg/Hamburger";
 import LogoMobile from "../../assets/svg/LogoMobile";
+import MobileMenu from "./MobileMenu";
 
-type Props = {
-  toggleMenu: boolean;
-  toggleMenuHandler: () => void;
-};
+type Props = {};
 
-const MobileDisplay: React.FC<Props> = ({ toggleMenu, toggleMenuHandler }) => {
+const MobileDisplay: React.FC<Props> = () => {
+  const [toggleMenu, setToggleMenu] = useState(false);
+
+  const toggleMenuHandler = () => setToggleMenu((prevState) => !prevState);
+
   return (
-    <div className="flex items-center h-full lg:hidden">
+    <div className="flex items-center h-full relative lg:hidden">
       <div className="px-4" onClick={toggleMenuHandler}>
         <CancelIcon
           className={`cursor-pointer transition ease duration-300 ${
@@ -28,6 +31,7 @@ const MobileDisplay: React.FC<Props> = ({ toggleMenu, toggleMenuHandler }) => {
           <LogoMobile />
         </Link>
       </div>
+      {toggleMenu && <MobileMenu />}
     </div>
   );
 };

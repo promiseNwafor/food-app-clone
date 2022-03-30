@@ -1,3 +1,5 @@
+import React from "react";
+
 const PrimeIcon = () => {
   return (
     <svg
@@ -5,6 +7,7 @@ const PrimeIcon = () => {
       width="18"
       height="18"
       viewBox="0 0 24 24"
+      className="mr-2"
     >
       <g fill="none" fill-rule="evenodd">
         <g fill="#F68B1E">
@@ -15,4 +18,4 @@ const PrimeIcon = () => {
   );
 };
 
-export default PrimeIcon;
+export default React.memo(PrimeIcon);
