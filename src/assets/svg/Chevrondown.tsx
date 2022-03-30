@@ -1,10 +1,14 @@
 import React from "react";
 
-const Chevrondown = () => {
+type Props = {
+  className?: string;
+};
+
+const Chevrondown: React.FC<Props> = ({ className }) => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      className="h-5 w-5"
+      className={`h-5 w-5 ${className}`}
       viewBox="0 0 20 20"
       fill="currentColor"
     >

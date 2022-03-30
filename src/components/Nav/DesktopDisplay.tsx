@@ -1,6 +1,8 @@
 import { useState } from "react";
 import { ACCOUNT, LANGUAGE } from "./NavItem";
 import Dropdown from "../common/Dropdown";
+import Box from "../common/Box";
+import Paragraph from "../common/Paragraph";
 import Logo from "../../assets/svg/Logo";
 import Chevrondown from "../../assets/svg/Chevrondown";
 import User from "../../assets/svg/User";
@@ -18,17 +20,17 @@ const DesktopDisplay: React.FC<Props> = () => {
     setAccountHovered((prevState) => !prevState);
 
   return (
-    <div className="hidden lg:grid grid-cols-4 items-center justify-between px-8 md:px-16 lg:px-20">
-      <div className="px-4 col-span-1 py-2">
+    <Box className="hidden lg:grid grid-cols-4 items-center justify-between px-8 md:px-16 lg:px-20">
+      <Box className="px-4 col-span-1 py-2">
         <Logo />
-      </div>
-      <div className="flex items-center h-full col-span-3 justify-self-end font-muli font-medium text-body">
-        <div
+      </Box>
+      <Box className="flex items-center h-full col-span-3 justify-self-end font-muli font-medium text-body">
+        <Box
           onMouseEnter={languageHoverHandler}
           onMouseLeave={languageHoverHandler}
           className="px-4 mx-1 flex h-full items-center uppercase relative"
         >
-          <p className="mr-1">English</p>
+          <Paragraph className="mr-1">English</Paragraph>
           <Chevrondown />
           {languageHovered && (
             <Dropdown
@@ -40,19 +42,19 @@ const DesktopDisplay: React.FC<Props> = () => {
               dropdownMapItems={LANGUAGE}
             />
           )}
-        </div>
-        <div className="px-4 mx-1 uppercase">
-          <p>Help</p>
-        </div>
-        <div
+        </Box>
+        <Box className="px-4 mx-1 uppercase">
+          <Paragraph>Help</Paragraph>
+        </Box>
+        <Box
           onMouseEnter={accountHoverHandler}
           onMouseLeave={accountHoverHandler}
           className="px-4 mx-1 bg-white h-full flex items-center relative"
         >
-          <div className="bg-gray-100 rounded-full p-1 mr-1">
+          <Box className="bg-gray-100 rounded-full p-1 mr-1">
             <User />
-          </div>
-          <p className="mx-1">Promise Nwafor</p>
+          </Box>
+          <Paragraph className="mx-1">Promise Nwafor</Paragraph>
           <Chevrondown />
           {accountHovered && (
             <Dropdown
@@ -66,9 +68,9 @@ const DesktopDisplay: React.FC<Props> = () => {
               }}
             />
           )}
-        </div>
-      </div>
-    </div>
+        </Box>
+      </Box>
+    </Box>
   );
 };
 
