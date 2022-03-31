@@ -13,14 +13,14 @@ const Logo = () => {
       <g
         id="Logo---Desktop"
         stroke="none"
-        stroke-width="1"
+        strokeWidth="1"
         fill="none"
-        fill-rule="evenodd"
+        fillRule="evenodd"
       >
         <g
           id="JumiaFood_Logo_Orange"
           transform="translate(0.000000, 0.398936)"
-          fill-rule="nonzero"
+          fillRule="nonzero"
         >
           <g
             id="Group"

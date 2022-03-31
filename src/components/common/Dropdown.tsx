@@ -15,7 +15,7 @@ type Props = {
   };
   boxStyle?: string;
   ulStyle?: string;
-  buttonProps?: { children: string; className: string };
+  buttonProps?: { children: string; className: string; onClick?: () => void };
 };
 
 const Dropdown: React.FC<Props> = ({
@@ -40,6 +40,7 @@ const Dropdown: React.FC<Props> = ({
       </ul>
       {buttonProps && (
         <Button
+          onClick={buttonProps.onClick}
           className={`${buttonProps.className}`}
           children={buttonProps.children}
         />

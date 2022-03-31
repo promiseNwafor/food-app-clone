@@ -6,11 +6,18 @@ import Dropdown from "../common/Dropdown";
 import { LANGUAGE } from "./NavItem";
 import Chevrondown from "../../assets/svg/Chevrondown";
 import PrimeIcon from "../../assets/svg/PrimeIcon";
+import { useAppDispatch, useAppSelector } from "../../app/hooks";
+import { signin, signout } from "../../store/authSlice";
 
 type Props = {};
 
 const MobileMenu: React.FC<Props> = () => {
   const [languageToggle, setLanguageToggle] = useState(false);
+  const user = useAppSelector((state) => state.auth);
+  const dispatch = useAppDispatch();
+
+  const loginHandler = () => dispatch(signin());
+  const logoutHandler = () => dispatch(signout());
 
   const languageToggleHandler = () =>
     setLanguageToggle((prevState) => !prevState);
@@ -45,11 +52,16 @@ const MobileMenu: React.FC<Props> = () => {
           />
           <ListItem listItemStyle="menu-list">Vendors</ListItem>
           <ListItem listItemStyle="menu-list">Help</ListItem>
-          <ListItem listItemStyle="menu-list">My account</ListItem>
+          {user.isAuth && (
+            <ListItem listItemStyle="menu-list">My account</ListItem>
+          )}
         </ul>
         <Button
-          className="hover:bg-black w-full font-semibold text-sm uppercase text-white rounded-sm bg-body mb-2 py-2"
-          children="Log out"
+          onClick={user.isAuth ? logoutHandler : loginHandler}
+          className={`hover:bg-black w-full font-semibold text-sm uppercase text-white rounded-sm bg-body mb-2 py-2 ${
+            !user.isAuth && "bg-orange bg-opacity-95 hover:bg-orange"
+          }`}
+          children={user.isAuth ? "Log out" : "Login / Signup"}
         />
       </Box>
     </Box>

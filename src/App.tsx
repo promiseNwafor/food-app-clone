@@ -1,10 +1,14 @@
-import Navbar from "./components/Nav";
+import { Route, Routes } from "react-router-dom";
+import Home from "./views/pages/Home";
+import Wrapper from "./views/Wrapper";
 
 const App = () => {
   return (
-    <div className="">
-      <Navbar />
-    </div>
+    <Routes>
+      <Route element={<Wrapper />}>
+        <Route path="/" element={<Home />} />
+      </Route>
+    </Routes>
   );
 };
 

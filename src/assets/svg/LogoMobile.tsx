@@ -15,11 +15,11 @@ const LogoMobile = () => {
       <g
         id="Logo---mobile-"
         stroke="none"
-        stroke-width="1"
+        strokeWidth="1"
         fill="none"
-        fill-rule="evenodd"
+        fillRule="evenodd"
       >
-        <g id="JumiaFood_Logo_Orange" fill="#FF9900" fill-rule="nonzero">
+        <g id="JumiaFood_Logo_Orange" fill="#FF9900" fillRule="nonzero">
           <g id="Group" transform="translate(0.709037, 0.000000)">
             <g transform="translate(18.142999, 4.254220)">
               <path
