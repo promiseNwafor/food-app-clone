@@ -1,17 +1,18 @@
+import React from "react";
+import Box from "../common/Box";
+import Paragraph from "../common/Paragraph";
 import Phone from "../../assets/svg/Phone";
 
-type Props = {};
-
-const TopBar = (props: Props) => {
+const TopBar = () => {
   return (
-    <div className="flex items-center justify-center h-17 text-base bg-primary font-arial">
-      <p className="">
+    <Box className="px-3 pt-3 md:pt-0 text-center md:flex items-center justify-center h-17 text-base bg-primary font-arial">
+      <Paragraph className="inline">
         Need help placing an order? Call: <a href="tel:018832408">018832408 </a>
         or <a href="tel:017000556">017000556</a>
-      </p>
+      </Paragraph>
       <Phone />
-    </div>
+    </Box>
   );
 };
 
-export default TopBar;
+export default React.memo(TopBar);
