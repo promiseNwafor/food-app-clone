@@ -8,7 +8,7 @@ import LogoMobile from "../../assets/svg/LogoMobile";
 
 type Props = {};
 
-const MobileDisplay: React.FC<Props> = () => {
+const MobileScreen: React.FC<Props> = () => {
   const [toggleMenu, setToggleMenu] = useState(false);
 
   const toggleMenuHandler = () => setToggleMenu((prevState) => !prevState);
@@ -37,4 +37,4 @@ const MobileDisplay: React.FC<Props> = () => {
   );
 };
 
-export default MobileDisplay;
+export default MobileScreen;

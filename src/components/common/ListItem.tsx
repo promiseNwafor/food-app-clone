@@ -11,7 +11,7 @@ const ListItem: React.FC<Props> = ({
   return (
     <li
       onClick={onItemClickHandler}
-      className={`py-2 cursor-pointer ${listItemStyle}`}
+      className={`py-2 list-none ${listItemStyle}`}
     >
       {children}
     </li>

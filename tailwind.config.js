@@ -16,8 +16,12 @@ module.exports = {
         muli: ["muli", "sans-serif"],
         arial: ["Arial", "Helvetica", "sans-serif"],
       },
+      fontSize: {
+        h1: "2.5rem",
+      },
       boxShadow: {
         y: "5px 8px 16px rgb(0 0 0 / 10%)",
+        light: "0 2px 6px 0 rgb(0 0 0 / 5%)",
       },
     },
   },
