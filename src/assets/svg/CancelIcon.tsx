@@ -1,10 +1,11 @@
 import React from "react";
 
 type Props = {
-  className: string;
+  className?: string;
+  [x: string]: any;
 };
 
-const CancelIcon: React.FC<Props> = ({ className }) => {
+const CancelIcon: React.FC<Props> = ({ className, ...rest }) => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -13,6 +14,7 @@ const CancelIcon: React.FC<Props> = ({ className }) => {
       viewBox="0 0 24 24"
       stroke="#2A2A2A"
       strokeWidth={2}
+      {...rest}
     >
       <path
         strokeLinecap="round"

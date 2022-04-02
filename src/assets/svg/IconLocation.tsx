@@ -10,7 +10,7 @@ const IconLocation = (props: Props) => {
       height="24"
       viewBox="0 0 24 24"
     >
-      <g fill="none" fill-rule="evenodd">
+      <g fill="none" fillRule="evenodd">
         <g>
           <g transform="translate(-16 -40) translate(16 40)">
             <circle

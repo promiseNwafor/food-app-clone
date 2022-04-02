@@ -29,14 +29,14 @@ const Hero = () => {
               <IconLocation />
               <Box className="flex pl-1 items-center text-body">
                 <Paragraph children="Delivering to" />
-                <ListItem
-                  listItemStyle={`${
+                <Box
+                  className={`${
                     !user.isAuth && "hidden"
                   } flex pl-1 items-center text-orange`}
                 >
                   <Paragraph children="Reddington Lekki Hospital" />
                   <Chevrondown className="" />
-                </ListItem>
+                </Box>
               </Box>
             </ListItem>
             {!user.isAuth && (
