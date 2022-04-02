@@ -1,13 +1,10 @@
 import { useAppSelector } from "../../app/hooks";
 import Box from "../common/Box";
 import Card from "../common/Card";
-import Image from "../common/Image";
-import Paragraph from "../common/Paragraph";
+import ImageBox from "../common/ImageBox";
 import { SERVICES } from "./constants";
 
-type Props = {};
-
-const Services = (props: Props) => {
+const Services = () => {
   const user = useAppSelector((state) => state.user);
 
   return (
@@ -23,16 +20,18 @@ const Services = (props: Props) => {
           }`}
           key={service.id}
         >
-          <Image alt={service.title} className="w-12" src={service.imagePath} />
-          <Paragraph
-            className={`text-orange font-bold py-1 ${
-              !user.isAuth && "text-gray-300"
-            }`}
-            children={service.title}
-          />
-          <Paragraph
-            className={`text-body text-xs ${!user.isAuth && "text-gray-300"}`}
-            children={service.subtitle}
+          <ImageBox
+            image={{ src: service.imagePath, alt: service.title }}
+            title={{
+              children: service.title,
+              className: `text-orange font-bold py-1 ${
+                !user.isAuth && "text-gray-300"
+              }`,
+            }}
+            subtitle={{
+              children: service.subtitle,
+              className: `text-xs ${!user.isAuth && "text-gray-300"}`,
+            }}
           />
         </Card>
       ))}

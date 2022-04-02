@@ -4,9 +4,7 @@ import ad from "../../assets/img/ad.jpg";
 import Image from "../common/Image";
 import CancelIcon from "../../assets/svg/CancelIcon";
 
-type Props = {};
-
-const Ads = (props: Props) => {
+const Ads = () => {
   const [canceled, setCancel] = useState(false);
 
   const cancelHandler = () => setCancel((prevState) => !prevState);
@@ -15,7 +13,7 @@ const Ads = (props: Props) => {
     <Box
       className={`${
         canceled && "hidden"
-      } w-10/12 lg:w-3/5 m-auto mt-8 md:mt-20 mb-12 relative`}
+      } w-10/12 lg:w-3/5 m-auto mt-8 md:mt-20 mb-5 relative`}
     >
       <Image className="m-auto w-full" src={ad} alt="advert" />
       <CancelIcon
