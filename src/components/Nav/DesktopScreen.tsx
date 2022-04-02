@@ -51,7 +51,7 @@ const DesktopScreen = () => {
 
 const AccountStateDisplay = () => {
   const [accountHovered, setAccountHovered] = useState(false);
-  const user = useAppSelector((state) => state.auth);
+  const user = useAppSelector((state) => state.user);
   const dispatch = useAppDispatch();
 
   const accountHoverHandler = () =>

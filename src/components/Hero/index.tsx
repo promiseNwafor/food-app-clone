@@ -1,3 +1,4 @@
+import { useAppSelector } from "../../app/hooks";
 import Box from "../common/Box";
 import Paragraph from "../common/Paragraph";
 import ListItem from "../common/ListItem";
@@ -7,10 +8,11 @@ import rightSplash from "../../assets/img/jumiafood-homepage-right-splash-servic
 import IconLocation from "../../assets/svg/IconLocation";
 import Chevrondown from "../../assets/svg/Chevrondown";
 import Services from "./Services";
+import Input from "../common/Input";
 
-type Props = {};
+const Hero = () => {
+  const user = useAppSelector((state) => state.user);
 
-const Hero = (props: Props) => {
   return (
     <Box className="flex items-center justify-center font-muli">
       <Box className="hidden lg:block py-4 self-start">
@@ -19,7 +21,7 @@ const Hero = (props: Props) => {
       <Box className="">
         <Box className="px-4 pt-10">
           <Paragraph
-            className="text-text text-h1 font-bold lg:text-center pb-3"
+            className="text-text text-3xl md:text-4xl lg:text-h1 font-bold lg:text-center pb-3"
             children="Everything you need, delivered now"
           />
           <Box className="lg:ml-32">
@@ -33,9 +35,14 @@ const Hero = (props: Props) => {
                 </ListItem>
               </Box>
             </ListItem>
+            {!user.isAuth && (
+              <Input className="" placeholder="Enter your delivery address" />
+            )}
           </Box>
           <Paragraph
-            className="text-body font-bold pl-2 lg:ml-32"
+            className={`${
+              !user.isAuth && "hidden md:block"
+            } text-body font-bold pl-2 lg:ml-32`}
             children="Choose a service"
           />
           <Services />
