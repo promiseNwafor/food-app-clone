@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useAppSelector, useAppDispatch } from "../../app/hooks";
 import { signin, signout } from "../../store/authSlice";
-import { ACCOUNT, LANGUAGE } from "./NavItem";
+import { ACCOUNT, LANGUAGE } from "./constants";
 import Button from "../common/Button";
 import Dropdown from "../common/Dropdown";
 import Box from "../common/Box";
@@ -10,7 +10,7 @@ import Logo from "../../assets/svg/Logo";
 import Chevrondown from "../../assets/svg/Chevrondown";
 import User from "../../assets/svg/User";
 
-const DesktopDisplay = () => {
+const DesktopScreen = () => {
   const [languageHovered, setLanguageHovered] = useState(false);
 
   const languageHoverHandler = () =>
@@ -51,7 +51,7 @@ const DesktopDisplay = () => {
 
 const AccountStateDisplay = () => {
   const [accountHovered, setAccountHovered] = useState(false);
-  const user = useAppSelector((state) => state.auth);
+  const user = useAppSelector((state) => state.user);
   const dispatch = useAppDispatch();
 
   const accountHoverHandler = () =>
@@ -85,7 +85,7 @@ const AccountStateDisplay = () => {
         {accountHovered && (
           <Dropdown
             boxStyle="absolute w-full top-11 inset-x-0 border-t border-gray-300"
-            listItemProps={{ className: "capitalize py-1" }}
+            listItemProps={{ className: "capitalize py-1 cursor-pointer" }}
             dropdownMapItems={ACCOUNT}
             buttonProps={{
               onClick: logoutHandler,
@@ -102,4 +102,4 @@ const AccountStateDisplay = () => {
   return content;
 };
 
-export default DesktopDisplay;
+export default DesktopScreen;

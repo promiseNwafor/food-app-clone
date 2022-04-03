@@ -3,7 +3,7 @@ import Box from "../common/Box";
 import Button from "../common/Button";
 import ListItem from "../common/ListItem";
 import Dropdown from "../common/Dropdown";
-import { LANGUAGE } from "./NavItem";
+import { LANGUAGE } from "./constants";
 import Chevrondown from "../../assets/svg/Chevrondown";
 import PrimeIcon from "../../assets/svg/PrimeIcon";
 import { useAppDispatch, useAppSelector } from "../../app/hooks";
@@ -13,7 +13,7 @@ type Props = {};
 
 const MobileMenu: React.FC<Props> = () => {
   const [languageToggle, setLanguageToggle] = useState(false);
-  const user = useAppSelector((state) => state.auth);
+  const user = useAppSelector((state) => state.user);
   const dispatch = useAppDispatch();
 
   const loginHandler = () => dispatch(signin());
