@@ -89,7 +89,7 @@ type Props = {
 const CardMobile: React.FC<Props> = ({ item }) => {
   return (
     <Card
-      key={item.id}
+      key={`${item.vendor}${item.id}`}
       className="md:hidden flex flex-col min-w-full lg:w-96 min-h-sm p-4 justify-between m-5 shadow-none border"
     >
       <Box className="flex justify-between">
