@@ -11,7 +11,7 @@ const Subscribe = (props: Props) => {
   return (
     <Box className="bg-orange font-muli text-white text-center flex flex-col flex-center p-5 lg:pt-14 pb-9 mt-12 lg:mt-20">
       <Paragraph
-        className="font-bold text-xl lg:text-5xl pb-1"
+        className="font-semibold text-xl lg:text-5xl pb-1"
         children="Subscribe to our newsletter today!"
       />
       <Paragraph
@@ -49,7 +49,7 @@ const Subscribe = (props: Props) => {
         </Box>
         <Button
           children="Subscribe newsletter"
-          className="h-14 lg:h-16 w-full lg:w-1/6 my-2 lg:mx-2 bg-text text-white inline-block uppercase font-semibold"
+          className="h-14 lg:h-16 w-full rounded-sm lg:w-1/6 my-2 lg:mx-2 bg-text text-white inline-block uppercase font-semibold"
         />
       </Box>
       <Box className="hidden lg:flex flex-center w-full">

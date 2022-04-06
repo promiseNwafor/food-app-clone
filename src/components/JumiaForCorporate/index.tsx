@@ -7,13 +7,14 @@ type Props = {};
 
 const JumiaForCorporate = (props: Props) => {
   return (
-    <Box className="flex flex-col flex-center font-muli text-text mt-5 bg-gray-100 lg:bg-white py-10  lg:py-32 relative">
+    <Box className="flex flex-col flex-center font-muli text-text mt-5 bg-gray-100 lg:bg-white py-10  lg:py-36 relative">
       <Image
         alt="jumia-for-corporate"
         src={feature}
-        className="hidden lg:block absolute -left-40 scale-110"
+        id="corporate-image"
+        className="hidden lg:block absolute -left-40 scale-105"
       />
-      <Box className="w-full flex flex-col flex-center lg:w-1/3 text-center px-6 lg:px-0 lg:pt-10">
+      <Box className="w-full flex flex-col flex-center lg:w-2/5 text-center px-6 lg:px-0 lg:pt-10">
         <Paragraph
           className="font-bold text-xl md:text-2xl lg:text-5xl pb-7"
           children="Jumia Food for Corporate"

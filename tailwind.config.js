@@ -4,7 +4,8 @@ module.exports = {
     extend: {
       spacing: {
         17: "69px",
-        half: "42%",
+        23: "22%",
+        half: "40%",
       },
       colors: {
         primary: "#FF9900",

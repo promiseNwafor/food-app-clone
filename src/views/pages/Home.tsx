@@ -1,5 +1,6 @@
 import { Fragment } from "react";
 import Ads from "../../components/Ads";
+import Footer from "../../components/Footer";
 import Hero from "../../components/Hero";
 import HowItWorks from "../../components/HowItWorks";
 import JumiaFoodApp from "../../components/JumiaFoodApp";
@@ -21,6 +22,7 @@ const Home = (props: Props) => {
       <Subscribe />
       <JumiaForCorporate />
       <JumiaFoodApp />
+      <Footer />
     </Fragment>
   );
 };

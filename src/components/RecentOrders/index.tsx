@@ -19,7 +19,7 @@ const RecentOrders = () => {
         className="capitalize font-semibold pb-4 text-text text-3xl md:text-h1"
         children="Recent orders"
       />
-      <Box className="flex md:flex-wrap overflow-auto md:overflow-auto justify-center">
+      <Box className="flex flex-wrap justify-center px-4">
         {RECENTORDERITEMS.map((item) => (
           <>
             <Card
