@@ -23,7 +23,7 @@ const RecentOrders = () => {
         {RECENTORDERITEMS.map((item) => (
           <>
             <Card
-              key={item.id}
+              key={`${item.id}-${item.vendor}`}
               className="hidden md:flex w-full lg:w-96 min-h-sm p-4 justify-between m-5 shadow-none border"
             >
               <Box className="flex flex-col justify-between">
@@ -34,7 +34,7 @@ const RecentOrders = () => {
                 />
                 <Button
                   children="Repeat order"
-                  className="uppercase rounded-sm text-xs p-2 px-3 font-semibold text-white bg-green"
+                  className="uppercase rounded-sm text-sm p-2 px-3 font-semibold text-white bg-green"
                 />
               </Box>
               <Box className="flex-grow capitalize ml-3">
@@ -45,7 +45,7 @@ const RecentOrders = () => {
                 {item.items.map((it, i) => (
                   <ListItem
                     listItemStyle="flex justify-between text-text py-0"
-                    key={i}
+                    key={`${i}${it}`}
                   >
                     <Paragraph
                       className=""
@@ -89,7 +89,7 @@ type Props = {
 const CardMobile: React.FC<Props> = ({ item }) => {
   return (
     <Card
-      key={`${item.vendor}${item.id}`}
+      key={`${item.vendor}-${item.id}`}
       className="md:hidden flex flex-col min-w-full lg:w-96 min-h-sm p-4 justify-between m-5 shadow-none border"
     >
       <Box className="flex justify-between">
@@ -102,7 +102,10 @@ const CardMobile: React.FC<Props> = ({ item }) => {
       </Box>
       <Box>
         {item.items.map((it, i) => (
-          <ListItem listItemStyle="flex justify-between text-text py-0" key={i}>
+          <ListItem
+            listItemStyle="flex justify-between text-text py-0"
+            key={`${it}-${i}`}
+          >
             <Paragraph className="" children={`${it.quantity} x ${it.order}`} />
             <Paragraph children={`N${it.amount.toFixed(2)}`} />
           </ListItem>
