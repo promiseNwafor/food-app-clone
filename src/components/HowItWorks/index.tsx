@@ -20,11 +20,12 @@ const HowItWorks = () => {
       <Box className="flex">
         {ITEMS.map((item) => (
           <ImageBox
-            className="mx-24 my-10 flex flex-col flex-center"
+            key={item.title}
+            className="mx-24 text-center my-10 flex flex-col flex-center"
             image={{ src: item.path, alt: item.title, className: "w-24 mb-2" }}
             title={{
               children: item.title,
-              className: `font-bold text-text text-2xl py-2`,
+              className: `font-bold text-text text-xl py-2`,
             }}
             subtitle={{
               children: item.subtitle,

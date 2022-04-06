@@ -1,0 +1,39 @@
+import sauce from "../../assets/img/sauce.avif";
+import party from "../../assets/img/party.avif";
+import meds from "../../assets/img/meds.avif";
+
+export const ITEMS = [
+    {
+        id: 0,
+        title: "Fountain Meds Pharmacy - Lekki",
+        tag: ['Supermarket', 'Pharmacy'],
+        image: meds,
+        rating: 5,
+        star: 1,
+        dateAdded: new Date(),
+        timeOpen: new Date(),
+        prepTime: new Date(),
+    },
+    {
+        id: 1,
+        title: "Jumia Party - SMW",
+        tag: ['Alcoholic Drinks'],
+        image: party,
+        rating: 4.8,
+        star: 3,
+        dateAdded: new Date(),
+        timeOpen: new Date(),
+        prepTime: new Date(),
+    },
+    {
+        id: 2,
+        title: "Bukka Hut - Lekki",
+        tag: ['Nigerian'],
+        image: sauce,
+        rating: 4.1,
+        star: 1,
+        dateAdded: new Date(),
+        timeOpen: new Date(),
+        prepTime: new Date(),
+    },
+]

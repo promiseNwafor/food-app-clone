@@ -11,3 +11,12 @@
 .flex-center {
   @apply items-center justify-center;
 }
+
+@media (max-width: 1200px) {
+  #corporate-image {
+    left: -30%;
+  }
+  #app-image {
+    left: 50%;
+  }
+}
