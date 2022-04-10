@@ -7,31 +7,31 @@ import pharmacy from "../../assets/img/pharmacy.png";
 export const SERVICES = [
   {
     id: 0,
-    title: "Restaurants",
+    title: "restaurants",
     subtitle: "Food you love, from restaurants near you",
     imagePath: restaurants,
   },
   {
     id: 1,
-    title: "Dinner",
+    title: "dinner",
     subtitle: "Quality dinner from the top rated restaurants near you",
     imagePath: dinner,
   },
   {
     id: 2,
-    title: "Party",
+    title: "party",
     subtitle: "Alcoholic drinks and more to get your party started",
     imagePath: party,
   },
   {
     id: 3,
-    title: "Supermarket",
+    title: "supermarket",
     subtitle: "Fresh groceries and everyday essentials",
     imagePath: supermarket,
   },
   {
     id: 4,
-    title: "Pharmacy",
+    title: "pharmacy",
     subtitle: "Medication and personal care",
     imagePath: pharmacy,
   },

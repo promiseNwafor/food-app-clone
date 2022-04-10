@@ -3,11 +3,15 @@ import Box from "./Box";
 
 type Props = {
   className?: string;
+  [x: string]: any;
 };
 
-const Card: React.FC<Props> = ({ className, children }) => {
+const Card: React.FC<Props> = ({ className, children, ...rest }) => {
   return (
-    <Box className={`shadow-lg bg-white w-full rounded-sm ${className}`}>
+    <Box
+      {...rest}
+      className={`shadow-lg bg-white w-full rounded-sm ${className}`}
+    >
       {children}
     </Box>
   );

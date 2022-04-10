@@ -17,7 +17,7 @@ const Footer = (props: Props) => {
           <Paragraph className="font-semibold py-5" children="City" />
           {CITY.map((city, i) => (
             <ListItem
-              listItemStyle="py-0 text-gray-300 text-sm leading-6"
+              listItemStyle="py-0 text-gray-300 text-sm"
               key={i}
               children={city}
             />
@@ -27,7 +27,7 @@ const Footer = (props: Props) => {
           <Paragraph className="font-semibold py-5" children="Cuisines" />
           {CUISINES.map((cuisine, i) => (
             <ListItem
-              listItemStyle="py-0 text-gray-300 text-sm leading-6"
+              listItemStyle="py-0 text-gray-300 text-sm"
               key={i}
               children={cuisine}
             />
@@ -40,7 +40,7 @@ const Footer = (props: Props) => {
           />
           {POPULAR_VENDORS.map((vendor, i) => (
             <ListItem
-              listItemStyle="py-0 text-gray-300 text-sm leading-6"
+              listItemStyle="py-0 text-gray-300 text-sm"
               key={i}
               children={vendor}
             />
@@ -50,7 +50,7 @@ const Footer = (props: Props) => {
           <Paragraph className="font-semibold py-5" children="Jumia Food" />
           {JUMIA_FOOD.map((item, i) => (
             <ListItem
-              listItemStyle="py-0 text-gray-300 text-sm leading-6"
+              listItemStyle="py-0 text-gray-300 text-sm"
               key={i}
               children={item}
             />
