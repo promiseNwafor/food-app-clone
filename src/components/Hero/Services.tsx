@@ -1,3 +1,4 @@
+import { Link, useNavigate } from "react-router-dom";
 import { useAppSelector } from "../../app/hooks";
 import Box from "../common/Box";
 import Card from "../common/Card";
@@ -6,6 +7,7 @@ import { SERVICES } from "./constants";
 
 const Services = () => {
   const user = useAppSelector((state) => state.user);
+  const navigate = useNavigate();
 
   return (
     <Box
@@ -19,12 +21,13 @@ const Services = () => {
             user.isAuth && "cursor-pointer hover:border-green"
           }`}
           key={service.id}
+          onClick={() => user.isAuth && navigate(service.title)}
         >
           <ImageBox
             image={{ src: service.imagePath, alt: service.title }}
             title={{
               children: service.title,
-              className: `text-orange font-bold py-1 ${
+              className: `text-orange font-bold py-1 capitalize ${
                 !user.isAuth && "text-gray-300"
               }`,
             }}

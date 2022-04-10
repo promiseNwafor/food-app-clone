@@ -25,14 +25,14 @@ const Hero = () => {
             children="Everything you need, delivered now"
           />
           <Box className="lg:ml-32">
-            <ListItem listItemStyle="flex items-center font-bold">
+            <ListItem listItemStyle="flex sm:items-center font-bold">
               <IconLocation />
-              <Box className="flex pl-1 items-center text-body">
+              <Box className="sm:flex pl-1 items-center text-body">
                 <Paragraph children="Delivering to" />
                 <Box
                   className={`${
                     !user.isAuth && "hidden"
-                  } flex pl-1 items-center text-orange`}
+                  } flex sm:pl-1 items-center text-orange`}
                 >
                   <Paragraph children="Reddington Lekki Hospital" />
                   <Chevrondown className="" />
