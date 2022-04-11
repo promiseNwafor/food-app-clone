@@ -12,14 +12,14 @@ const Service = (props: Props) => {
   const location = useLocation();
 
   return (
-    <Box className="py-10 font-muli">
-      <Box className="flex py-2 px-17">
+    <Box className="py-10 lg:px-24 font-muli">
+      <Box className="flex px-6 lg:p-2">
         <Paragraph className="text-gray-500" children="Home > " />
         <Paragraph className="font-bold ml-1" children="Vendor" />
       </Box>
       <Box className="flex flex-wrap justify-center">
         {HAPPY_HOUR_DEALS.map((item) => (
-          <CardContent className="lg:w-72" item={item} key={item.id} />
+          <CardContent className="lg:w-64" item={item} key={item.id} />
         ))}
       </Box>
     </Box>
